@@ -4,9 +4,7 @@
  * [724] Find Pivot Index
  */
 
-package main
-
-import "fmt"
+package code
 
 // @lc code=start
 func pivotIndex(nums []int) int {
@@ -31,8 +29,3 @@ func pivotIndex(nums []int) int {
 }
 
 // @lc code=end
-
-func main() {
-	fmt.Println(pivotIndex([]int{1, 2, 3}))
-	fmt.Println(pivotIndex([]int{2, 1, -1}))
-}
