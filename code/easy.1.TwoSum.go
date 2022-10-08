@@ -7,6 +7,8 @@
 package code
 
 // @lc code=start
+//
+//lint:ignore U1000 //
 func twoSum(nums []int, target int) []int {
 	len := len(nums)
 	for i := 0; i < len; i++ {

@@ -7,6 +7,8 @@
 package code
 
 // @lc code=start
+//
+//lint:ignore U1000 //
 func runningSum(nums []int) []int {
 	ret := []int{}
 	sum := 0

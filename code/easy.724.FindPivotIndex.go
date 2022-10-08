@@ -7,6 +7,8 @@
 package code
 
 // @lc code=start
+//
+//lint:ignore U1000 //
 func pivotIndex(nums []int) int {
 	len := len(nums)
 	for i := 0; i < len; i++ {

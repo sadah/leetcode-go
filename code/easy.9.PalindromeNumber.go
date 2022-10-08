@@ -8,6 +8,8 @@ package code
 import "strconv"
 
 // @lc code=start
+//
+//lint:ignore U1000 //
 func isPalindrome(x int) bool {
 	s := strconv.Itoa(x)
 	rs := Reverse(s)
