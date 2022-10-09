@@ -6,14 +6,6 @@
 
 package code
 
-import "fmt"
-
-// Definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 // @lc code=start
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 	current1 := list1
@@ -42,11 +34,3 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 }
 
 // @lc code=end
-//
-//lint:ignore U1000 //
-func printAllNode(node *ListNode) {
-	for node != nil {
-		fmt.Printf("Node: %#v, %#v\n", node.Val, node.Next)
-		node = node.Next
-	}
-}
