@@ -8,6 +8,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// Print all nodes for singly-linked list.
 func PrintAllNode(node *ListNode) {
 	fmt.Println("PrintAllNode start")
 	for node != nil {
