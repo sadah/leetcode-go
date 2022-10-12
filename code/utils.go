@@ -25,7 +25,7 @@ type Node struct {
 }
 
 // Print all nodes for tree.
-func PrintAllTreeNode(root *Node) {
+func PrintAllNode(root *Node) {
 	fmt.Println("-------- PrintAllNode start")
 	printNode(root)
 	fmt.Println("-------- PrintAllNode end")
@@ -36,6 +36,12 @@ func printNode(node *Node) {
 	for _, n := range node.Children {
 		printNode(n)
 	}
+}
+
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
 func Reverse(s string) string {
