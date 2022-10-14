@@ -4,7 +4,13 @@
  * [13] Roman to Integer
  */
 
+package code
+
+import "strings"
+
 // @lc code=start
+//
+//lint:ignore U1000 //
 func romanToInt(s string) int {
 	// I             1
 	// V             5
