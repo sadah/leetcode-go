@@ -31,13 +31,73 @@ func (z *Int) SetString(s string, base int) (*Int, bool)
 
 ## String
 
+### Small things
+
 文字列を1文字ずつのスライスにする
 
 ```go
 	cs := strings.Split(s, "")
 ```
 
-## Slice
+### Reverse
+
+文字列を反転させる
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	// 界世 ,olleH
+	fmt.Println(Reverse("Hello, 世界"))
+}
+
+func Reverse(s string) string {
+	runes := []rune(s)
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
+	}
+	return string(runes)
+}
+```
+* https://seven-901.hatenablog.com/entry/2021/06/14/234000
+
+## Array / Slice / Map
+
+### Small Things
+
+Mapの定義
+
+```go
+	sm := map[string]string{}
+```
+
+```go
+	sm := map[string]int{}
+```
+
+### Queue
+
+雑でもよければこんな感じ。
+
+```go
+	q := make([]int, 0)
+
+	// push
+	q = append(q, 1)
+	q = append(q, 2)
+
+	// pop
+	v1 := q[0]
+	q = q[1:]
+	fmt.Println(v1, q)
+
+	// pop
+	v2 := q[0]
+	q = q[1:]
+	fmt.Println(v2, q)
+```
 
 ### Binary Search
 
