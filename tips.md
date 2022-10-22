@@ -1,5 +1,34 @@
 # tips.md
 
+## fmt
+
+### Format
+
+```go
+	// %+v 構造体の場合にフィールド名を出力する
+	//
+	// 1
+	// {Transport:<nil> CheckRedirect:<nil> Jar:<nil> Timeout:0s}
+	fmt.Printf("%+v\n", 1)
+	fmt.Printf("%+v\n", http.Client{})
+
+	// %#v 値のGoの文法での表現を出力する
+	//
+	// 1
+	// http.Client{Transport:http.RoundTripper(nil), CheckRedirect:(func(*http.Request, []*http.Request) error)(nil), Jar:http.CookieJar(nil), Timeout:0}
+	fmt.Printf("%#v\n", 1)
+	fmt.Printf("%#v\n", http.Client{})
+
+	// %T 値の型のGoの文法での表現を出力する
+	//
+	// int
+	// http.Client
+	fmt.Printf("%T\n", 1)
+	fmt.Printf("%T\n", http.Client{})
+```
+
+* [fmt.Printfなんかこわくない - Qiita](https://qiita.com/rock619/items/14eb2b32f189514b5c3c)
+
 ## Numerical
 
 ### Over int64
