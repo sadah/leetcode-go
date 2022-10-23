@@ -31,7 +31,9 @@
 
 ## Numerical
 
-### Over int64
+### math/big
+
+#### Over int64
 
 int64を超えた数値を扱いたい場合は math/big を使うが NewInt の引数がint64となっている。
 
@@ -57,6 +59,18 @@ func (z *Int) SetString(s string, base int) (*Int, bool)
 * https://pkg.go.dev/math/big#NewInt
 * https://pkg.go.dev/math/big#Int.SetString
 
+#### Big binary digits
+
+大きな2進数の文字列(a,b)を扱う。big.Intを基数を指定して文字列にする場合はTextを使う。String()は内部的にはText(10)を呼んでいる。
+
+```
+	i1, _ := new(big.Int).SetString(a, 2)
+	i2, _ := new(big.Int).SetString(b, 2)
+	i3 := new(big.Int).Add(i1, i2)
+	return i3.Text(2)
+```
+
+* https://pkg.go.dev/math/big#Int.Text
 
 ## String
 
@@ -66,6 +80,18 @@ func (z *Int) SetString(s string, base int) (*Int, bool)
 
 ```go
 	cs := strings.Split(s, "")
+```
+
+### String <> Int
+
+```go
+	i, _ := strconv.ParseInt("111", 2, 64)
+	fmt.Println(i) // 7
+```
+
+```go
+	s := strconv.FormatInt(7, 2)
+	fmt.Println(s) // 111
 ```
 
 ### Reverse
