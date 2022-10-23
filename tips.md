@@ -63,7 +63,7 @@ func (z *Int) SetString(s string, base int) (*Int, bool)
 
 大きな2進数の文字列(a,b)を扱う。big.Intを基数を指定して文字列にする場合はTextを使う。String()は内部的にはText(10)を呼んでいる。
 
-```
+```go
 	i1, _ := new(big.Int).SetString(a, 2)
 	i2, _ := new(big.Int).SetString(b, 2)
 	i3 := new(big.Int).Add(i1, i2)
