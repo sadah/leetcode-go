@@ -20,15 +20,15 @@ func maxDepth(root *TreeNode) int {
 	if root == nil {
 		return 0
 	}
-	return depth(root, 0)
+	return maxNodeDepth(root, 0)
 }
 
-func depth(node *TreeNode, d int) int {
+func maxNodeDepth(node *TreeNode, d int) int {
 	if node == nil {
 		return d
 	}
-	l := depth(node.Left, d+1)
-	r := depth(node.Right, d+1)
+	l := maxNodeDepth(node.Left, d+1)
+	r := maxNodeDepth(node.Right, d+1)
 	if l > r {
 		return l
 	} else {
