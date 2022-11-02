@@ -15,9 +15,20 @@ package code
  *     Right *TreeNode
  * }
  */
- 
+//lint:ignore U1000 //
 func sortedArrayToBST(nums []int) *TreeNode {
-	return nil
+	if len(nums) == 0 {
+		return nil
+	}
+	i := len(nums) / 2
+	root := &TreeNode{Val: nums[i]}
+	if i != 0 {
+		root.Left = sortedArrayToBST(nums[:i])
+	}
+	if i != len(nums)-1 {
+		root.Right = sortedArrayToBST(nums[i+1:])
+	}
+	return root
 }
 
 // @lc code=end
