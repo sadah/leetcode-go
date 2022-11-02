@@ -15,35 +15,9 @@ package code
  *     Right *TreeNode
  * }
  */
-func isBalanced(root *TreeNode) bool {
-	if root == nil {
-		return true
-	}
-	l := depth(root.Left)
-	r := depth(root.Right)
-
-	abs := l - r
-	if l-r < 0 {
-		abs = r - l
-	}
-
-	if abs > 1 {
-		return false
-	}
-	return isBalanced(root.Left) && isBalanced(root.Right)
-}
-
-func depth(node *TreeNode) int {
-	if node == nil {
-		return 0
-	}
-	l := depth(node.Left)
-	r := depth(node.Right)
-	if l > r {
-		return l + 1
-	} else {
-		return r + 1
-	}
+ 
+func sortedArrayToBST(nums []int) *TreeNode {
+	return nil
 }
 
 // @lc code=end

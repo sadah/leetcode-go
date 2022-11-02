@@ -15,6 +15,7 @@ package code
  *     Right *TreeNode
  * }
  */
+//lint:ignore U1000 //
 func isBalanced(root *TreeNode) bool {
 	if root == nil {
 		return true

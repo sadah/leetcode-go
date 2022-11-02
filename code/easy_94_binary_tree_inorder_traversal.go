@@ -15,6 +15,7 @@ package code
  *     Right *TreeNode
  * }
  */
+//lint:ignore U1000 //
 func inorderTraversal(root *TreeNode) []int {
 	var nums = []int{}
 	if root == nil {
