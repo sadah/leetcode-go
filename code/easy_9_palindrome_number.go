@@ -10,9 +10,9 @@ import "strconv"
 // @lc code=start
 //
 //lint:ignore U1000 //
-func isPalindrome(x int) bool {
+func isPalindrome1(x int) bool {
 	s := strconv.Itoa(x)
-	rs := reverse(s)
+	rs := reverse1(s)
 	if s == rs {
 		return true
 	} else {
@@ -20,7 +20,7 @@ func isPalindrome(x int) bool {
 	}
 }
 
-func reverse(s string) string {
+func reverse1(s string) string {
 	runes := []rune(s)
 	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
 		runes[i], runes[j] = runes[j], runes[i]
