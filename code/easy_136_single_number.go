@@ -19,7 +19,7 @@ func singleNumber(nums []int) int {
 		}
 	}
 	ret := 0
-	for k, _ := range m {
+	for k := range m {
 		ret = k
 	}
 	return ret
