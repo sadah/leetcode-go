@@ -6,8 +6,6 @@
 
 package code
 
-import "fmt"
-
 // @lc code=start
 /**
  * Definition for singly-linked list.
