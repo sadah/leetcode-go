@@ -11,7 +11,7 @@ type MyStack struct {
 	queue []int
 }
 
-func Constructor() MyStack {
+func Constructor1() MyStack {
 	return MyStack{[]int{}}
 }
 
