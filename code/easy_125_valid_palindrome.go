@@ -14,7 +14,7 @@ import (
 // @lc code=start
 //
 //lint:ignore U1000 //
-func isPalindrome(s string) bool {
+func isPalindrome1(s string) bool {
 	ls := strings.ToLower(s)
 	r := regexp.MustCompile("[^0-9a-z]")
 	rls := r.ReplaceAllString(ls, "")
