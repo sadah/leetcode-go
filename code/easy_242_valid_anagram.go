@@ -12,6 +12,8 @@ import (
 )
 
 // @lc code=start
+//
+//lint:ignore U1000 //
 func isAnagram(s string, t string) bool {
 	if len(s) != len(t) {
 		return false

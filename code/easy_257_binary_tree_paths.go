@@ -20,6 +20,7 @@ import (
  *     Right *TreeNode
  * }
  */
+//lint:ignore U1000 //
 func binaryTreePaths(root *TreeNode) []string {
 	if root == nil {
 		return nil
