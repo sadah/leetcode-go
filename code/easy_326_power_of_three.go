@@ -7,6 +7,8 @@
 package code
 
 // @lc code=start
+//
+//lint:ignore U1000 //
 func isPowerOfThree(n int) bool {
 	if n <= 0 {
 		return false
