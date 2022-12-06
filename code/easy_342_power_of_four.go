@@ -4,7 +4,11 @@
  * [342] Power of Four
  */
 
+package code
+
 // @lc code=start
+//
+//lint:ignore U1000 //
 func isPowerOfFour(n int) bool {
 	if n <= 0 {
 		return false
@@ -23,4 +27,5 @@ func isPowerOfFour(n int) bool {
 	}
 	return true
 }
+
 // @lc code=end
