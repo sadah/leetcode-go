@@ -18,7 +18,7 @@ func intersection(nums1 []int, nums2 []int) []int {
 		m2[n] = true
 	}
 	ret := []int{}
-	for k, _ := range m1 {
+	for k := range m1 {
 		_, ok := m2[k]
 		if ok {
 			ret = append(ret, k)
