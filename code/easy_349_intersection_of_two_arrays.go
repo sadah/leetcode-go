@@ -6,7 +6,8 @@
 package code
 
 // @lc code=start
-// lint:ignore U1000 //
+//
+//lint:ignore U1000 //
 func intersection(nums1 []int, nums2 []int) []int {
 	m1 := map[int]bool{}
 	for _, n := range nums1 {
