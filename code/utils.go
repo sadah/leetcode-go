@@ -51,3 +51,16 @@ func Reverse(s string) string {
 	}
 	return string(runes)
 }
+
+//lint:ignore U1000 //
+func unique[T comparable](s []T) []T {
+	m := make(map[T]bool)
+	var ret []T
+	for _, str := range s {
+		if _, ok := m[str]; !ok {
+			m[str] = true
+			ret = append(ret, str)
+		}
+	}
+	return ret
+}
