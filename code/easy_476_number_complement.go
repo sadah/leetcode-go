@@ -14,7 +14,7 @@ import (
 
 // @lc code=start
 //
-//lint:ignore U100 //
+//lint:ignore U1000 //
 func findComplement(num int) int {
 	chars := strings.Split(fmt.Sprintf("%b", num), "")
 	ret := make([]string, len(chars))
